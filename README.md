@@ -12,12 +12,13 @@ Test your knowledge and learn more about computers with this interactive and fun
 * **User-Friendly Interface:** Clean and intuitive design for a seamless quiz experience.
 * **Instant Feedback:** Get immediate results to see how well you performed.
 * **Responsive Design:** Enjoy the quiz on any device, from desktops to mobile phones.
+* **Randomized Questions:** Each quiz session features different questions for variety.
 
 ## Technologies Used
 
 * **HTML5:** For the core structure and content of the website.
 * **CSS3:** For styling and creating an appealing visual design.
-* **JavaScript (ES6+):** For interactive elements, quiz logic, and dynamic content.
+* **JavaScript (ES6+):** For interactive elements, quiz logic, timer, and dynamic content.
 
 ## Getting Started
 
@@ -43,7 +44,15 @@ You only need a modern web browser to run this quiz game.
 
 ## Usage
 
-Once you open `home.html`, you'll be presented with the quiz. Follow the on-screen instructions to answer questions and navigate through the quiz.
+Enter your name when prompted to personalize your experience.
+
+Answer each question by selecting one of the provided options.
+
+Use the "Next Question" button to proceed.
+
+A timer counts down for each question — answer before time runs out!
+
+Your score is displayed at the end along with an option to play again.
 
 ## Contributing
 
@@ -61,6 +70,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## Contact
 
-Shivam Jaiswal - [shivamjais11b43@gmail.com]
+Shivam Jaiswal
+Email: shivamjais11b43@gmail.com
+GitHub: https://github.com/Shivam-Devz/Quiz-Game
 
-Project Link: [https://github.com/Shivam-Devz/Quiz-Game]

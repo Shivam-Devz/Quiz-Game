@@ -1,25 +1,187 @@
-body main{
-    background-image: url(pic2.jpg);
-    background-position: center;
-    background-size:cover;
-    height: 100vh;
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.section {
+  margin-top: 5%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00e5ff;
+  margin-bottom: 40px;
+}
+
+h4 {
+  color: #ffd600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-field input {
+  color: #ffffff;
+  border-bottom: 1px solid #00e5ff;
+}
+
+.input-field label {
+  color: #cccccc;
+}
+
+.input-field input:focus + label {
+  color: #00e5ff !important;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #00e5ff !important;
+  box-shadow: 0 1px 0 0 #00e5ff !important;
+}
+
+.btn {
+  background-color: #00e5ff;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00b8d4;
+  transform: scale(1.05);
+}
+
+.green {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.white {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 6px 0;
+}
+
+.progress.red .indeterminate {
+  background-color: #ff3d00;
+}
+
+a.btn.blue {
+  margin-top: 20px;
+  background-color: #2962ff;
+}
+
+a.btn.blue:hover {
+  background-color: #0039cb;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer {
+  font-size: 0.9rem;
 }
 
 
-P{
-    padding: 8px;
+@media screen and (max-width: 768px) {
+  .section {
+    margin-top: 8%;
+    padding: 25px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+
+  .input-field input {
+    font-size: 1rem;
+  }
+
+  .btn, a.btn.blue {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .green {
+    font-size: 1.1rem;
+    margin-top: 25px;
+  }
+
+  .white {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
 }
 
-.row h4{
-    text-align: center;
-    color:cornsilk;
-}
+@media screen and (max-width: 480px) {
+  .section {
+    margin-top: 10%;
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
 
-.footer{
-    text-align: left;
-    font-size: 20px;
-    font-weight: 300;
-    color: white;
-    background-color: black;
-    
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .input-field input {
+    font-size: 0.9rem;
+  }
+
+  .input-field label {
+    font-size: 0.9rem;
+  }
+
+  .btn, a.btn.blue {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .green {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .white {
+    padding: 5px 8px;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
 }

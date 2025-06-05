@@ -4,65 +4,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <title>QUIZ-GAME</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
 
     <link rel="stylesheet" href="home.css" />
   </head>
   <body>
     <main>
       <section class="container section">
-        <h1 style="color:gold;text-align: center;">Computer Quiz Hub</h1>
+        <h1>Computer Quiz Hub</h1>
         <div class="row">
-          <div class="col s12 l6 offset-l3">
-            <form class="myform" name="id" onsubmit="submitted(event)">
-              <h4>PLAYER NAME</h4>
+          <form class="myform" name="id" onsubmit="submitted(event)">
+            <h4>PLAYER NAME</h4>
 
-              <div class="progress red">
-                <div class="indeterminate"></div>
-              </div>
+            <div class="progress red">
+              <div class="indeterminate"></div>
+            </div>
 
-              <div class="input-field">
-                <i class="material-icons yellow-text prefix">account_box</i>
-                <input type="text" class="white-text" id="name" />
-                <label for="name">Name Here</label>
-                <p class="center">
-                  <button
-                    type="submit"
-                    class="btn blue"
-                    onclick="this.style.display='none'"
-                  >
-                    Submit Name
-                  </button>
-                </p>
-              </div>
+            <div class="input-field">
+              <i class="material-icons yellow-text prefix">account_box</i>
+              <input type="text" class="white-text" id="name" autocomplete="off" />
+              <label for="name">Name Here</label>
+            </div>
 
-              <div>
-                <p class="white-text green">QUIZ RULES :</p>
-                <p class="black-text white">
-                  1. YOU CANNOT SKIP ANY QUESTIONS.
-                </p>
-                <p class="black-text white">
-                  2. YOU CANNOT GO TO PREVIOUS QUESTION.
-                </p>
-                <p class="black-text white">
-                  3. ATTEMPT ALL QUESTION WITHOUT CHEATING.
-                </p>
-              </div>
+            <div>
+              <p class="white-text green">QUIZ RULES :</p>
+              <p class="black-text white">1. YOU CANNOT SKIP ANY QUESTIONS.</p>
+              <p class="black-text white">2. YOU CANNOT GO TO PREVIOUS QUESTION.</p>
+              <p class="black-text white">3. ATTEMPT ALL QUESTION WITHOUT CHEATING.</p>
+            </div>
 
-              <div class="progress red">
-                <div class="indeterminate"></div>
-              </div>
+            <div class="progress red">
+              <div class="indeterminate"></div>
+            </div>
 
-              <p class="center">
-                <a href="quiz.html" class="btn blue">Let's Start</a>
-              </p>
-            </form>
-          </div>
+            <p class="center">
+              <a href="#" id="start-btn" class="btn blue disabled">Let's Start</a>
+            </p>
+          </form>
         </div>
       </section>
     </main>
@@ -70,18 +55,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script>
-      function submitted(e) {
-        e.preventDefault();
+      const nameInput = document.getElementById('name');
+      const startBtn = document.getElementById('start-btn');
 
-        let namee = document.forms["id"]["name"].value;
-        sessionStorage.setItem("name", namee);
-      }
+      nameInput.addEventListener('input', () => {
+        if(nameInput.value.trim().length > 0){
+          startBtn.classList.remove('disabled');
+        } else {
+          startBtn.classList.add('disabled');
+        }
+      });
+
+      startBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const name = nameInput.value.trim();
+
+        if(name.length === 0){
+          alert('Please enter your name before starting the quiz.');
+          return;
+        }
+
+        sessionStorage.setItem('name', name);
+        window.location.href = 'quiz.html';
+      });
+
+      document.querySelector('form').addEventListener('submit', e => e.preventDefault());
     </script>
 
     <footer>
-        <div class="footer">
-        Copyright &copy; 2025 | All Rights Reserved.
-        </div>
+      <div class="footer">Copyright &copy; 2025 | All Rights Reserved.</div>
     </footer>
   </body>
 </html>

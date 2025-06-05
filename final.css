@@ -1,0 +1,160 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #1a1a40, #000);
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+.award_icon {
+    font-size: 80px;
+    animation: glow 1.5s infinite ease-in-out;
+}
+
+.username {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #ffd700;
+    line-height: 1.4;
+}
+
+.name {
+    font-weight: bold;
+    color: #00e5ff;
+}
+
+.userpoints {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.points {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.btn-play-again {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #00e5ff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-play-again:hover {
+    background-color: #00b8d4;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00b8d4, 0 0 30px #00b8d4;
+}
+
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px gold, 0 0 10px gold;
+    }
+    50% {
+        text-shadow: 0 0 15px gold, 0 0 30px orange;
+    }
+    100% {
+        text-shadow: 0 0 5px gold, 0 0 10px gold;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 480px;
+        padding: 30px 25px;
+    }
+
+    .award_icon {
+        font-size: 60px;
+    }
+
+    .username {
+        font-size: 2rem;
+        margin: 15px 0;
+    }
+
+    .userpoints {
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+
+    .points {
+        font-size: 1.5rem;
+    }
+
+    .btn-play-again {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+        margin-top: 25px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body, html {
+        height: auto;
+        padding: 20px 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .wrapper {
+        width: 95%;
+        max-width: 100%;
+        padding: 20px 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+    }
+
+    .award_icon {
+        font-size: 50px;
+    }
+
+    .username {
+        font-size: 1.7rem;
+        margin: 12px 0;
+    }
+
+    .userpoints {
+        font-size: 1.1rem;
+        margin-top: 12px;
+    }
+
+    .points {
+        font-size: 1.3rem;
+    }
+
+    .btn-play-again {
+        display: block;
+        width: 100%;
+        padding: 14px 0;
+        font-size: 1rem;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+}
